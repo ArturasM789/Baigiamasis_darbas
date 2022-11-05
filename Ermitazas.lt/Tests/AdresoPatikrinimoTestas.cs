@@ -13,11 +13,15 @@ namespace Ermitazas.lt.Tests
             ErmitazasPage page = new ErmitazasPage(chromeDriver);
             ErmitazasShopsPage shopsPage = new ErmitazasShopsPage(chromeDriver);
             page.NavigateToPage();
+            page.CloseAdd();
+            page.AcceptCookies();
             page.ClickShopsButton();
             shopsPage.ClickCityButton();
             shopsPage.SelectVilnius();
             shopsPage.ConfirmAddress();
         }
+
+
 
 
     }

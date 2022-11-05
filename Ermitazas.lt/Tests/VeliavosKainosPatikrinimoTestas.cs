@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Ermitazas.lt.Tests
 {
-    public class Sutikrinti_Veliavos_Kaina : BaseTest
+    public class VeliavosKainosPatikrinimoTestas : BaseTest
     {
         [Test]
 
@@ -14,12 +14,11 @@ namespace Ermitazas.lt.Tests
             FlagPage flagPage = new FlagPage(chromeDriver);
 
             page.NavigateToPage();
+            page.CloseAdd();
+            page.AcceptCookies();
             page.InputToSearchBar("Stiebinė Lietuvos valstybės istorinė vėliava, 100 x 170 cm");
             flagSearchResultPage.ClickSearchedItem();
             flagPage.AssertPrice();
         }
     }
-
-
-
 }
